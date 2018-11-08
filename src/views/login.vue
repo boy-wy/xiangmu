@@ -26,7 +26,7 @@ export default {
     methods:{
         async handleLogin(){
             const res = await this.$http.post('login',this.formData)
-            console.log(res);
+            // console.log(res);
             if(res.data.meta.status==200){
                 const token = res.data.data.token
                 sessionStorage.setItem('token',token)
